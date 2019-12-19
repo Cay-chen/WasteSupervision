@@ -4,8 +4,11 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="navigationBarColor">#f46444</color>
 
     <!--login-->
     <color name="loginBtn">#FF7F50</color>
+
+    <color name="colorPrimaryDarkTrans">#CCf57257</color>
 
 </resources>

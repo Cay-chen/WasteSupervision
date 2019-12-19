@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">Waste Supervision</string>
 
-<!--login-->
+    <!--login-->
 
     <string name="AccountNmHint">请输入登陆账号</string>
     <string name="PwdHint">请输入密码</string>
     <string name="login">登录</string>
     <string name="toastAccount">请输入账号</string>
     <string name="toastPwd">请输入密码</string>
-
+<!---       扫码界面-->
+    <string name="open_light">打开散光灯</string>
 </resources>
