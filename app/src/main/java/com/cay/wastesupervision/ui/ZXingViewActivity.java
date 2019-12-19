@@ -1,5 +1,6 @@
 package com.cay.wastesupervision.ui;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 
 import com.cay.wastesupervision.R;
 import com.google.zxing.BarcodeFormat;
@@ -40,6 +42,10 @@ public class ZXingViewActivity extends AppCompatActivity implements QRCodeView.D
     @Override
     protected void onStart() {
         super.onStart();
+
+        if (!ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.CAMERA)){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},0);
+        }
 
         mZXingView.startCamera(); // 打开后置摄像头开始预览，但是并未开始识别
 //        mZXingView.startCamera(Camera.CameraInfo.CAMERA_FACING_FRONT); // 打开前置摄像头开始预览，但是并未开始识别
